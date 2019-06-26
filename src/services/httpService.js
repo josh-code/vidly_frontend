@@ -13,6 +13,7 @@ axios.interceptors.response.use(null, error => {
   if (!expectedError) {
     logger.init(error);
     toast.error("An unexpected error occured.");
+    console.log(error);
   }
 
   return Promise.reject(error);
